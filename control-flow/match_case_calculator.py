@@ -1,16 +1,26 @@
-num1 = int(input("Enter the first number:"))
-num2 = int(input("Enter the second number:"))
+# Prompt user for input
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
 
-op = str(input("Choose the operation (+, -, *, /):"))
+# Ask the user for the operation
+operation = input("Choose the operation (+, -, *, /): ")
 
-match op:
+# Perform the calculation using match-case
+match operation:
     case "+":
-        print(f"The result is {num1+num2}.")
+        result = num1 + num2
+        print(f"The result is {result}")
     case "-":
-        print(f"The result is {num1-num2}.")
-    case "/":
-        print(f"The result is {num1/num2}.")
+        result = num1 - num2
+        print(f"The result is {result}")
     case "*":
-        print(f"The result is {num1*num2}.")
-    case _:
-        print("Cannot divide by zero")
+        result = num1 * num2
+        print(f"The result is {result}")
+    case "/":
+        if num2 != 0:  # Handle division by zero
+            result = num1 / num2
+            print(f"The result is {result}")
+        else:
+            print("Cannot divide by zero.")
+    case _:  # Default case for invalid operations
+        print("Invalid operation. Please choose +, -, *, or /.")
