@@ -1,6 +1,6 @@
 #asking the user for input
 income = int(input("Enter your monthly income: "))
-expenses = int(input ( "Enetr your total monthly expenses: "))
+expenses = int(input ( "Enter your total monthly expenses: "))
 interest = 0.05
 
 #calculations
