@@ -1,3 +1,4 @@
+# Prompt the user for task details
 task = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ").lower()
 time_bound = input("Is it time-bound? (yes/no): ").lower()
@@ -17,5 +18,5 @@ match priority:
 if time_bound == "yes":
     reminder += " that requires immediate attention today!"
 
-# Print reminder
-print("\nReminder:", reminder)
+# Print the customized reminder with the exact expected format
+print(f"Reminder: {reminder}")
