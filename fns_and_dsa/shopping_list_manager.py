@@ -19,11 +19,13 @@ def main():
         if choice == 1:
             # Add an item to the shopping list
             item = input("Enter the name of the item to add: ").strip()
-            if item:
+            if not item:
+                print("Invalid input. Item name cannot be empty.")
+            elif item.isdigit():  # Check if the input is purely numeric
+                print("Invalid input. Numbers are not allowed as item names.")
+            else:
                 shopping_list.append(item)
                 print(f"'{item}' has been added to the shopping list.")
-            else:
-                print("Invalid input. Item name cannot be empty.")
 
         elif choice == 2:
             # Remove an item from the shopping list
