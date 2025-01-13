@@ -10,18 +10,22 @@ def main():
 
     while True:
         display_menu()
-        choice = input("Enter your choice: ")
+        try:
+            choice = int(input("Enter your choice (1-4): "))  # Convert input to integer
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 4.")
+            continue
 
-        if choice == '1':
+        if choice == 1:
             # Add an item to the shopping list
-            item = input("\nEnter the item to add: ").strip()
+            item = input("Enter the name of the item to add: ").strip()
             if item:
                 shopping_list.append(item)
                 print(f"'{item}' has been added to the shopping list.")
             else:
                 print("Invalid input. Item name cannot be empty.")
 
-        elif choice == '2':
+        elif choice == 2:
             # Remove an item from the shopping list
             item = input("Enter the name of the item to remove: ").strip()
             if item in shopping_list:
@@ -30,7 +34,7 @@ def main():
             else:
                 print(f"'{item}' is not in the shopping list.")
 
-        elif choice == '3':
+        elif choice == 3:
             # Display the current shopping list
             if shopping_list:
                 print("\nShopping List:")
@@ -39,13 +43,13 @@ def main():
             else:
                 print("The shopping list is currently empty.")
 
-        elif choice == '4':
+        elif choice == 4:
             # Exit the program
-            print("Thank you for choosing us!")
+            print("Goodbye!")
             break
 
         else:
-            print("Invalid choice. Please try again.")
+            print("Invalid choice. Please enter a number between 1 and 4.")
 
 if __name__ == "__main__":
     main()
