@@ -9,5 +9,5 @@ def safe_divide(numerator, denominator, default=None):
         print(f"Error: {e}")
         return default
     except TypeError as e:
-        print(f"Error: Invalid input type. {e}")
+        print(f"Error: Please enter numeric values only.")
         return default
