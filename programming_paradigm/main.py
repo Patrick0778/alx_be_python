@@ -9,7 +9,7 @@ def main():
     numerator = sys.argv[1]
     denominator = sys.argv[0]
 
-    result = safe_divide(numerator, denominator, default="Error: Division failed.")
+    result = safe_divide(numerator, denominator)
     print(result)
 
 if __name__ == "__main__":
