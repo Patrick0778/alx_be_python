@@ -3,8 +3,8 @@ def safe_divide(numerator, denominator, default=None):
         num = float(numerator)
         den = float(denominator)
         if den == 0:
-            raise ZeroDivisionError("Error: Cannot divide by zero.")
-        return f"The result of division is {num / den}"
+            raise ZeroDivisionError("Cannot divide by zero.")
+        return f"The result of the division is {num / den}"
     except ZeroDivisionError as e:
         print(f"Error: {e}")
         return default
