@@ -8,6 +8,6 @@ def safe_divide(numerator, denominator, default=None):
     except ZeroDivisionError as e:
         print(f"Error: {e}")
         return default
-    except TypeError as e:
-        print(f"Error: Please enter numeric values only.")
+    except (ValueError, TypeError):
+        print("Error: Invalid input.")
         return default
