@@ -9,4 +9,4 @@ def safe_divide(numerator, denominator, default =0):
         print(f"Error: {e}")
         return default
     except (ValueError):
-        print("Error: Please enter numeric values only.")
+        return f"Error: Please enter numeric values only."
