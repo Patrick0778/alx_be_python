@@ -1,8 +1,10 @@
 def safe_divide(numerator, denominator, default=None):
     try:
-        if denominator == 0:
+        num = float(numerator)
+        den = float(denominator)
+        if den == 0:
             raise ZeroDivisionError("Cannot divide by zero.")
-        return numerator / denominator
+        return num / den
     except ZeroDivisionError as e:
         print(f"Error: {e}")
         return default
