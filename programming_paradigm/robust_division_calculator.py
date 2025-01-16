@@ -4,7 +4,7 @@ def safe_divide(numerator, denominator, default=None):
         den = float(denominator)
         if den == 0:
             raise ZeroDivisionError("Error: Cannot divide by zero.")
-        return num / den
+        print(f"The result of division is {num / den}")
     except ZeroDivisionError as e:
         print(f"Error: {e}")
         return default
